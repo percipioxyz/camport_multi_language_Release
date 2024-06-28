@@ -22,6 +22,7 @@ namespace fetch_frame
     {
         public Form1()
         {
+            cl = new PercipioSDK();
 
             if (!ListDevice())
             {
@@ -115,7 +116,6 @@ namespace fetch_frame
 
         private bool ListDevice()
         {
-            cl = new PercipioSDK();
             dev_list = cl.ListDevice();
             int sz = dev_list.Count();
             if (sz == 0) 
