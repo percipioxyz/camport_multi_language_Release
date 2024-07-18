@@ -6,7 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisplayWithOpenCVDemo", "DisplayWithOpenCVDemo\DisplayWithOpenCVDemo.csproj", "{EEC6E26E-39AA-49A8-9032-1263B16FCD20}"
 EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution、
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
 		Release|x64 = Release|x64
 	EndGlobalSection
