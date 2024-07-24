@@ -87,6 +87,9 @@ namespace fetch_frame
         private System.IntPtr handle;
         private CSharpPercipioDeviceEvent _event;
 
+        private bool has_depth = false;
+        private bool has_color = false;
+
         private bool isCameraOpened = false;
         private bool isCameraRunning = false;
         private bool isDepthEnabled = true;
@@ -169,11 +172,26 @@ namespace fetch_frame
 
             button_capture.Text = "Start";
 
-            comboBox_depth_reso_list.Enabled = true;
-            comboBox_color_reso_list.Enabled = true;
+            if (has_depth)
+            {
+                comboBox_depth_reso_list.Enabled = true;
+                checkBox_depth_enable.Enabled = true;
+            }
+            else {
+                comboBox_depth_reso_list.Enabled = false;
+                checkBox_depth_enable.Enabled = false;
+            }
 
-            checkBox_depth_enable.Enabled = true;
-            checkBox_color_enable.Enabled = true;
+            if(has_color)
+            {
+                comboBox_color_reso_list.Enabled = true;
+                checkBox_color_enable.Enabled = true;
+            }
+            else
+            {
+                comboBox_color_reso_list.Enabled = false;
+                checkBox_color_enable.Enabled = false;
+            }
 
             return;
         }
@@ -275,7 +293,7 @@ namespace fetch_frame
                 comboBox_color_reso_list.Items.Clear();
                 comboBox_color_reso_list.Text = "";
 
-                bool has_depth = cl.DeviceHasStream(handle, PERCIPIO_STREAM_DEPTH);
+                has_depth = cl.DeviceHasStream(handle, PERCIPIO_STREAM_DEPTH);
                 if (!has_depth)
                 {
                     isDepthEnabled = false;
@@ -301,10 +319,12 @@ namespace fetch_frame
                     {
                         comboBox_depth_reso_list.Enabled = false;
                     }
+
+                    isDepthEnabled = true;
                     checkBox_depth_enable.Enabled = true;
                 }
 
-                bool has_color = cl.DeviceHasStream(handle, PERCIPIO_STREAM_COLOR);
+                has_color = cl.DeviceHasStream(handle, PERCIPIO_STREAM_COLOR);
                 if (!has_color)
                 {
                     isColorEnabled = false;
@@ -330,6 +350,7 @@ namespace fetch_frame
                     {
                         comboBox_color_reso_list.Enabled = false;
                     }
+                    isColorEnabled = true;
                     checkBox_color_enable.Enabled = true;
                 }
 
@@ -440,7 +461,11 @@ namespace fetch_frame
                     dump_calib_data(color_dist, color_dist.Count(), 1);
                 }
 
-                cl.DeviceStreamEnable(handle, m_stream);
+                int ret = cl.DeviceStreamEnable(handle, m_stream);
+                if(ret != 0) { 
+                    MessageBox.Show("stream enable failed!");
+                    return;
+                }
 
                 CaptureCamera();
             }
