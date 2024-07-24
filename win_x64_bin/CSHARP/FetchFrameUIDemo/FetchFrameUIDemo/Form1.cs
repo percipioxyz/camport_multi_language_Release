@@ -297,6 +297,7 @@ namespace fetch_frame
                 if (!has_depth)
                 {
                     isDepthEnabled = false;
+                    checkBox_depth_enable.CheckState = CheckState.Unchecked;
                     checkBox_depth_enable.Enabled = false;
                     comboBox_depth_reso_list.Enabled = false;
                 }
@@ -321,6 +322,7 @@ namespace fetch_frame
                     }
 
                     isDepthEnabled = true;
+                    checkBox_depth_enable.CheckState = CheckState.Checked;
                     checkBox_depth_enable.Enabled = true;
                 }
 
@@ -328,6 +330,7 @@ namespace fetch_frame
                 if (!has_color)
                 {
                     isColorEnabled = false;
+                    checkBox_color_enable.CheckState = CheckState.Unchecked;
                     checkBox_color_enable.Enabled = false;
                     comboBox_color_reso_list.Enabled = false;
                 }
@@ -351,6 +354,7 @@ namespace fetch_frame
                         comboBox_color_reso_list.Enabled = false;
                     }
                     isColorEnabled = true;
+                    checkBox_color_enable.CheckState = CheckState.Checked;
                     checkBox_color_enable.Enabled = true;
                 }
 
