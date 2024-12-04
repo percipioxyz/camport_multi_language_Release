@@ -246,7 +246,7 @@ namespace DisplayWithOpenCVDemo
                     {
                         if (frames[i].streamID == PERCIPIO_STREAM_DEPTH)
                         {
-                             cl.DeviceStreamMapDepthImageToColorCoordinate(depth_calib_data, frames[i].width, frames[i].height, depth_scale_unit, frames[i],
+                             cl.DeviceStreamMapDepthImageToColorCoordinate(depth_calib_data, frames[i], depth_scale_unit, 
                                 color_calib_data, frames[i].width, frames[i].height, registration_depth);
                             
                             Mat cv_raw_depth = Mat.FromPixelData(registration_depth.height, registration_depth.width, MatType.CV_16U, registration_depth.Ptr().getCPtr());

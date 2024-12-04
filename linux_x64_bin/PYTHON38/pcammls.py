@@ -5726,6 +5726,26 @@ TY_INT_SGPM_REF_PHASE_SCALE = _pcammls.TY_INT_SGPM_REF_PHASE_SCALE
 r""" Reference Phase scale when calc a depth"""
 TY_INT_SGPM_REF_PHASE_OFFSET = _pcammls.TY_INT_SGPM_REF_PHASE_OFFSET
 r""" Reference Phase offset when calc a depth"""
+TY_FLOAT_SGPM_EPI_HS = _pcammls.TY_FLOAT_SGPM_EPI_HS
+r""" Epipolar Constraint pattern scale"""
+TY_INT_SGPM_EPI_HF = _pcammls.TY_INT_SGPM_EPI_HF
+r""" Epipolar Constraint pattern offset"""
+TY_BOOL_SGPM_EPI_EN = _pcammls.TY_BOOL_SGPM_EPI_EN
+r""" Epipolar Constraint enable"""
+TY_INT_SGPM_EPI_CH0 = _pcammls.TY_INT_SGPM_EPI_CH0
+r""" Epipolar Constraint channel0"""
+TY_INT_SGPM_EPI_CH1 = _pcammls.TY_INT_SGPM_EPI_CH1
+r""" Epipolar Constraint channel1"""
+TY_INT_SGPM_EPI_THRESH = _pcammls.TY_INT_SGPM_EPI_THRESH
+r""" Epipolar Constraint thresh"""
+TY_BOOL_SGPM_ORDER_FILTER_EN = _pcammls.TY_BOOL_SGPM_ORDER_FILTER_EN
+r""" Phase order filter enable"""
+TY_INT_SGPM_ORDER_FILTER_CHN = _pcammls.TY_INT_SGPM_ORDER_FILTER_CHN
+r""" Phase order filter channel"""
+TY_INT_DEPTH_MIN_MM = _pcammls.TY_INT_DEPTH_MIN_MM
+r""" min depth in mm output"""
+TY_INT_DEPTH_MAX_MM = _pcammls.TY_INT_DEPTH_MAX_MM
+r""" max depth in mm ouput"""
 TY_STRUCT_PHC_GROUP_ATTR = _pcammls.TY_STRUCT_PHC_GROUP_ATTR
 r""" Phase compute group attribute"""
 TY_ENUM_DEPTH_QUALITY = _pcammls.TY_ENUM_DEPTH_QUALITY
@@ -7406,6 +7426,12 @@ class TY_DEVICE_BASE_INFO(object):
 
 # Register TY_DEVICE_BASE_INFO in _pcammls:
 _pcammls.TY_DEVICE_BASE_INFO_swigregister(TY_DEVICE_BASE_INFO)
+BEGINNER = _pcammls.BEGINNER
+
+EXPERT = _pcammls.EXPERT
+
+GURU = _pcammls.GURU
+
 class TY_FEATURE_INFO(object):
     r"""Proxy of C++ TY_FEATURE_INFO class."""
 
@@ -7420,6 +7446,7 @@ class TY_FEATURE_INFO(object):
     name = property(_pcammls.TY_FEATURE_INFO_name_get, _pcammls.TY_FEATURE_INFO_name_set, doc=r""" describe string""")
     bindComponentID = property(_pcammls.TY_FEATURE_INFO_bindComponentID_get, _pcammls.TY_FEATURE_INFO_bindComponentID_set, doc=r""" component ID current feature bind to""")
     bindFeatureID = property(_pcammls.TY_FEATURE_INFO_bindFeatureID_get, _pcammls.TY_FEATURE_INFO_bindFeatureID_set, doc=r""" feature ID current feature bind to""")
+    visibility = property(_pcammls.TY_FEATURE_INFO_visibility_get, _pcammls.TY_FEATURE_INFO_visibility_set, doc=r"""visibility""")
     reserved = property(_pcammls.TY_FEATURE_INFO_reserved_get, _pcammls.TY_FEATURE_INFO_reserved_set, doc=r"""reserved""")
 
     def CSize(self):
@@ -8867,6 +8894,26 @@ def TYGetDeviceFeatureInfo(hDevice, componentID, featureInfo, entryCount):
     """
     return _pcammls.TYGetDeviceFeatureInfo(hDevice, componentID, featureInfo, entryCount)
 
+def TYGetDeviceXMLSize(hDevice, size):
+    r"""
+    Get the Device xml size
+    :param [in]:  hDevice       Device handle.
+    :param [out]: size          The size of device xml string
+
+    """
+    return _pcammls.TYGetDeviceXMLSize(hDevice, size)
+
+def TYGetDeviceXML(hDevice, xml, in_size, out_size):
+    r"""
+    Get the Device xml string
+    :param [in]:  hDevice       Device handle.
+    :param [in]:  xml           The buffer to store xml
+    :param [in]:  in_size       The size buffer
+    :param [out]: out_size      The actual size write in buffer
+
+    """
+    return _pcammls.TYGetDeviceXML(hDevice, xml, in_size, out_size)
+
 def TYGetByteArray(hDevice, componentID, featureID, pBuffer, bufferSize):
     r"""
     Read byte array from device.
@@ -9869,8 +9916,6 @@ class DevParamDataInt(object):
     __repr__ = _swig_repr
     value = property(_pcammls.DevParamDataInt_value_get, _pcammls.DevParamDataInt_value_set, doc=r"""value""")
     range = property(_pcammls.DevParamDataInt_range_get, _pcammls.DevParamDataInt_range_set, doc=r"""range""")
-    entryCount = property(_pcammls.DevParamDataInt_entryCount_get, _pcammls.DevParamDataInt_entryCount_set, doc=r"""entryCount""")
-    list = property(_pcammls.DevParamDataInt_list_get, _pcammls.DevParamDataInt_list_set, doc=r"""list""")
 
     def __init__(self):
         r"""__init__(self) -> DevParamDataInt"""
@@ -9885,6 +9930,8 @@ class DevParamDataEnum(object):
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
     __repr__ = _swig_repr
     value = property(_pcammls.DevParamDataEnum_value_get, _pcammls.DevParamDataEnum_value_set, doc=r"""value""")
+    entryCount = property(_pcammls.DevParamDataEnum_entryCount_get, _pcammls.DevParamDataEnum_entryCount_set, doc=r"""entryCount""")
+    list = property(_pcammls.DevParamDataEnum_list_get, _pcammls.DevParamDataEnum_list_set, doc=r"""list""")
 
     def __init__(self):
         r"""__init__(self) -> DevParamDataEnum"""
@@ -9929,6 +9976,7 @@ class DevParamData(object):
     __repr__ = _swig_repr
     b_param = property(_pcammls.DevParamData_b_param_get, _pcammls.DevParamData_b_param_set, doc=r"""b_param""")
     m_param = property(_pcammls.DevParamData_m_param_get, _pcammls.DevParamData_m_param_set, doc=r"""m_param""")
+    u32_param = property(_pcammls.DevParamData_u32_param_get, _pcammls.DevParamData_u32_param_set, doc=r"""u32_param""")
     f_param = property(_pcammls.DevParamData_f_param_get, _pcammls.DevParamData_f_param_set, doc=r"""f_param""")
     byteArray = property(_pcammls.DevParamData_byteArray_get, _pcammls.DevParamData_byteArray_set, doc=r"""byteArray""")
     st_param = property(_pcammls.DevParamData_st_param_get, _pcammls.DevParamData_st_param_set, doc=r"""st_param""")
@@ -9948,6 +9996,10 @@ class DevParam(object):
     type = property(_pcammls.DevParam_type_get, _pcammls.DevParam_type_set, doc=r"""type""")
     data = property(_pcammls.DevParam_data_get, _pcammls.DevParam_data_set, doc=r"""data""")
 
+    def isEmpty(self):
+        r"""isEmpty(self) -> bool"""
+        return _pcammls.DevParam_isEmpty(self)
+
     def toBool(self):
         r"""toBool(self) -> bool"""
         return _pcammls.DevParam_toBool(self)
@@ -9955,6 +10007,10 @@ class DevParam(object):
     def toInt(self):
         r"""toInt(self) -> int"""
         return _pcammls.DevParam_toInt(self)
+
+    def toEnum(self):
+        r"""toEnum(self) -> uint32_t"""
+        return _pcammls.DevParam_toEnum(self)
 
     def toFloat(self):
         r"""toFloat(self) -> float"""
@@ -10039,6 +10095,17 @@ class PercipioSDK(object):
 
         """
         return _pcammls.PercipioSDK_DevParamFromInt(self, val)
+
+    def DevParamFromEnum(self, val):
+        r"""
+        DevParamFromEnum(self, val) -> DevParam
+
+        Parameters
+        ----------
+        val: uint32_t
+
+        """
+        return _pcammls.PercipioSDK_DevParamFromEnum(self, val)
 
     def DevParamFromFloat(self, val):
         r"""
@@ -10159,6 +10226,17 @@ class PercipioSDK(object):
 
         """
         return _pcammls.PercipioSDK_DeviceLoadDefaultParameters(self, handle)
+
+    def DeviceClearDefaultParameters(self, handle):
+        r"""
+        DeviceClearDefaultParameters(self, handle) -> int
+
+        Parameters
+        ----------
+        handle: TY_DEV_HANDLE const
+
+        """
+        return _pcammls.PercipioSDK_DeviceClearDefaultParameters(self, handle)
 
     def DeviceRegiststerCallBackEvent(self, handler):
         r"""
@@ -10288,13 +10366,24 @@ class PercipioSDK(object):
         """
         return _pcammls.PercipioSDK_DeviceStreamFormatConfig(self, handle, stream, fmt)
 
+    def Value(self, fmt):
+        r"""
+        Value(self, fmt) -> uint32_t
+
+        Parameters
+        ----------
+        fmt: TY_ENUM_ENTRY const &
+
+        """
+        return _pcammls.PercipioSDK_Value(self, fmt)
+
     def Width(self, fmt):
         r"""
         Width(self, fmt) -> int
 
         Parameters
         ----------
-        fmt: TY_ENUM_ENTRY const
+        fmt: TY_ENUM_ENTRY const &
 
         """
         return _pcammls.PercipioSDK_Width(self, fmt)
@@ -10305,10 +10394,21 @@ class PercipioSDK(object):
 
         Parameters
         ----------
-        fmt: TY_ENUM_ENTRY const
+        fmt: TY_ENUM_ENTRY const &
 
         """
         return _pcammls.PercipioSDK_Height(self, fmt)
+
+    def Description(self, fmt):
+        r"""
+        Description(self, fmt) -> char const *
+
+        Parameters
+        ----------
+        fmt: TY_ENUM_ENTRY const &
+
+        """
+        return _pcammls.PercipioSDK_Description(self, fmt)
 
     def DeviceStreamOn(self, handle):
         r"""
@@ -10482,24 +10582,38 @@ class PercipioSDK(object):
         """
         return _pcammls.PercipioSDK_DeviceStreamDoUndistortion(self, calib_data, src, dst)
 
-    def DeviceStreamMapDepthImageToColorCoordinate(self, depth_calib, depthW, depthH, scale, srcDepth, color_calib, targetW, targetH, dstDepth):
+    def DeviceStreamMapDepthImageToColorCoordinate(self, depth_calib, srcDepth, scale, color_calib, targetW, targetH, dstDepth):
         r"""
-        DeviceStreamMapDepthImageToColorCoordinate(self, depth_calib, depthW, depthH, scale, srcDepth, color_calib, targetW, targetH, dstDepth) -> int
+        DeviceStreamMapDepthImageToColorCoordinate(self, depth_calib, srcDepth, scale, color_calib, targetW, targetH, dstDepth) -> int
 
         Parameters
         ----------
         depth_calib: PercipioCalibData const &
-        depthW: int const
-        depthH: int const
-        scale: float const
         srcDepth: image_data const &
+        scale: float const
         color_calib: PercipioCalibData const &
         targetW: int const
         targetH: int const
         dstDepth: image_data &
 
         """
-        return _pcammls.PercipioSDK_DeviceStreamMapDepthImageToColorCoordinate(self, depth_calib, depthW, depthH, scale, srcDepth, color_calib, targetW, targetH, dstDepth)
+        return _pcammls.PercipioSDK_DeviceStreamMapDepthImageToColorCoordinate(self, depth_calib, srcDepth, scale, color_calib, targetW, targetH, dstDepth)
+
+    def DeviceStreamMapRGBImageToDepthCoordinate(self, depth_calib, srcDepth, scale, color_calib, srcColor, dstColor):
+        r"""
+        DeviceStreamMapRGBImageToDepthCoordinate(self, depth_calib, srcDepth, scale, color_calib, srcColor, dstColor) -> int
+
+        Parameters
+        ----------
+        depth_calib: PercipioCalibData const &
+        srcDepth: image_data const &
+        scale: float const
+        color_calib: PercipioCalibData const &
+        srcColor: image_data const &
+        dstColor: image_data &
+
+        """
+        return _pcammls.PercipioSDK_DeviceStreamMapRGBImageToDepthCoordinate(self, depth_calib, srcDepth, scale, color_calib, srcColor, dstColor)
 
     def DeviceStreamDepthSpeckleFilter(self, max_spc_size, max_spc_diff, image):
         r"""
@@ -10516,6 +10630,8 @@ class PercipioSDK(object):
 
 # Register PercipioSDK in _pcammls:
 _pcammls.PercipioSDK_swigregister(PercipioSDK)
+HUFFMAN = _pcammls.HUFFMAN
+
 MAX_STORAGE_SIZE = _pcammls.MAX_STORAGE_SIZE
 
 
