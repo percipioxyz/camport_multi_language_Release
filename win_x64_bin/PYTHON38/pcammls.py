@@ -4852,6 +4852,94 @@ class TY_CAMERA_INTRINSIC_ARRAY(object):
 
 # Register TY_CAMERA_INTRINSIC_ARRAY in _pcammls:
 _pcammls.TY_CAMERA_INTRINSIC_ARRAY_swigregister(TY_CAMERA_INTRINSIC_ARRAY)
+class TY_CAMERA_ROTATION_ARRAY(object):
+    r"""Proxy of C++ TY_CAMERA_ROTATION_ARRAY class."""
+
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+
+    def __init__(self, nelements):
+        r"""
+        __init__(self, nelements) -> TY_CAMERA_ROTATION_ARRAY
+
+        Parameters
+        ----------
+        nelements: size_t
+
+        """
+        _pcammls.TY_CAMERA_ROTATION_ARRAY_swiginit(self, _pcammls.new_TY_CAMERA_ROTATION_ARRAY(nelements))
+    __swig_destroy__ = _pcammls.delete_TY_CAMERA_ROTATION_ARRAY
+
+    def __getitem__(self, index):
+        r"""
+        __getitem__(self, index) -> TY_CAMERA_ROTATION
+
+        Parameters
+        ----------
+        index: size_t
+
+        """
+        return _pcammls.TY_CAMERA_ROTATION_ARRAY___getitem__(self, index)
+
+    def __setitem__(self, index, value):
+        r"""
+        __setitem__(self, index, value)
+
+        Parameters
+        ----------
+        index: size_t
+        value: TY_CAMERA_ROTATION
+
+        """
+        return _pcammls.TY_CAMERA_ROTATION_ARRAY___setitem__(self, index, value)
+
+    def cast(self):
+        r"""cast(self) -> TY_CAMERA_ROTATION"""
+        return _pcammls.TY_CAMERA_ROTATION_ARRAY_cast(self)
+
+    @staticmethod
+    def frompointer(t):
+        r"""
+        frompointer(t) -> TY_CAMERA_ROTATION_ARRAY
+
+        Parameters
+        ----------
+        t: TY_CAMERA_ROTATION *
+
+        """
+        return _pcammls.TY_CAMERA_ROTATION_ARRAY_frompointer(t)
+
+    @staticmethod
+    def FromVoidPtr(t, size):
+        r"""
+        FromVoidPtr(t, size) -> TY_CAMERA_ROTATION_ARRAY
+
+        Parameters
+        ----------
+        t: void *
+        size: int
+
+        """
+        return _pcammls.TY_CAMERA_ROTATION_ARRAY_FromVoidPtr(t, size)
+
+    def VoidPtr(self):
+        r"""VoidPtr(self) -> void *"""
+        return _pcammls.TY_CAMERA_ROTATION_ARRAY_VoidPtr(self)
+
+    @staticmethod
+    def ReleasePtr(p):
+        r"""
+        ReleasePtr(p)
+
+        Parameters
+        ----------
+        p: TY_CAMERA_ROTATION_ARRAY *
+
+        """
+        return _pcammls.TY_CAMERA_ROTATION_ARRAY_ReleasePtr(p)
+
+# Register TY_CAMERA_ROTATION_ARRAY in _pcammls:
+_pcammls.TY_CAMERA_ROTATION_ARRAY_swigregister(TY_CAMERA_ROTATION_ARRAY)
 class TY_CAMERA_EXTRINSIC_ARRAY(object):
     r"""Proxy of C++ TY_CAMERA_EXTRINSIC_ARRAY class."""
 
@@ -5486,6 +5574,8 @@ TY_STRUCT_EXTRINSIC_TO_DEPTH = _pcammls.TY_STRUCT_EXTRINSIC_TO_DEPTH
 r"""extrinsic between  depth cam and current component , see TY_CAMERA_EXTRINSIC"""
 TY_STRUCT_EXTRINSIC_TO_IR_LEFT = _pcammls.TY_STRUCT_EXTRINSIC_TO_IR_LEFT
 r"""extrinsic between  left IR and current compoent, see TY_CAMERA_EXTRINSIC"""
+TY_STRUCT_CAM_RECTIFIED_ROTATION = _pcammls.TY_STRUCT_CAM_RECTIFIED_ROTATION
+r"""see TY_CAMERA_ROTATION"""
 TY_STRUCT_CAM_DISTORTION = _pcammls.TY_STRUCT_CAM_DISTORTION
 r"""see TY_CAMERA_DISTORTION"""
 TY_STRUCT_CAM_CALIB_DATA = _pcammls.TY_STRUCT_CAM_CALIB_DATA
@@ -5572,10 +5662,6 @@ TY_BOOL_IR_FLASHLIGHT = _pcammls.TY_BOOL_IR_FLASHLIGHT
 r"""Enable switch for floodlight used in ir component"""
 TY_INT_IR_FLASHLIGHT_INTENSITY = _pcammls.TY_INT_IR_FLASHLIGHT_INTENSITY
 r"""ir component flashlight intensity level"""
-TY_BOOL_RGB_FLASHLIGHT = _pcammls.TY_BOOL_RGB_FLASHLIGHT
-r"""Enable switch for floodlight used in rgb component"""
-TY_INT_RGB_FLASHLIGHT_INTENSITY = _pcammls.TY_INT_RGB_FLASHLIGHT_INTENSITY
-r"""rgb component flashlight intensity level"""
 TY_STRUCT_DO0_WORKMODE = _pcammls.TY_STRUCT_DO0_WORKMODE
 r"""DO_0 workmode, see TY_DO_WORKMODE"""
 TY_STRUCT_DI0_WORKMODE = _pcammls.TY_STRUCT_DI0_WORKMODE
@@ -5588,9 +5674,15 @@ TY_STRUCT_DO2_WORKMODE = _pcammls.TY_STRUCT_DO2_WORKMODE
 r"""DO_2 workmode, see TY_DO_WORKMODE"""
 TY_STRUCT_DI2_WORKMODE = _pcammls.TY_STRUCT_DI2_WORKMODE
 r"""DI_2 workmode, see TY_DI_WORKMODE"""
+TY_BOOL_RGB_FLASHLIGHT = _pcammls.TY_BOOL_RGB_FLASHLIGHT
+r"""Enable switch for floodlight used in rgb component"""
+TY_INT_RGB_FLASHLIGHT_INTENSITY = _pcammls.TY_INT_RGB_FLASHLIGHT_INTENSITY
+r"""rgb component flashlight intensity level"""
 TY_ENUM_CONFIG_MODE = _pcammls.TY_ENUM_CONFIG_MODE
 
-TY_FOC_CALIB_START = _pcammls.TY_FOC_CALIB_START
+TY_ENUM_TEMPERATURE_ID = _pcammls.TY_ENUM_TEMPERATURE_ID
+
+TY_STRUCT_TEMPERATURE = _pcammls.TY_STRUCT_TEMPERATURE
 
 TY_BOOL_AUTO_EXPOSURE = _pcammls.TY_BOOL_AUTO_EXPOSURE
 r"""Auto exposure switch"""
@@ -5608,6 +5700,8 @@ TY_INT_TOF_HDR_RATIO = _pcammls.TY_INT_TOF_HDR_RATIO
 r"""tof sensor hdr ratio for depth"""
 TY_INT_TOF_JITTER_THRESHOLD = _pcammls.TY_INT_TOF_JITTER_THRESHOLD
 r"""tof jitter threshold for depth"""
+TY_FLOAT_EXPOSURE_TIME_US = _pcammls.TY_FLOAT_EXPOSURE_TIME_US
+r"""the exposure time, unit: us"""
 TY_INT_LASER_POWER = _pcammls.TY_INT_LASER_POWER
 r"""Laser power level"""
 TY_BOOL_LASER_AUTO_CTRL = _pcammls.TY_BOOL_LASER_AUTO_CTRL
@@ -5746,6 +5840,10 @@ TY_INT_DEPTH_MIN_MM = _pcammls.TY_INT_DEPTH_MIN_MM
 r"""min depth in mm output"""
 TY_INT_DEPTH_MAX_MM = _pcammls.TY_INT_DEPTH_MAX_MM
 r"""max depth in mm ouput"""
+TY_INT_SGBM_TEXTURE_OFFSET = _pcammls.TY_INT_SGBM_TEXTURE_OFFSET
+r"""texture filter value offset"""
+TY_INT_SGBM_TEXTURE_THRESH = _pcammls.TY_INT_SGBM_TEXTURE_THRESH
+r"""texture filter threshold"""
 TY_STRUCT_PHC_GROUP_ATTR = _pcammls.TY_STRUCT_PHC_GROUP_ATTR
 r"""Phase compute group attribute"""
 TY_ENUM_DEPTH_QUALITY = _pcammls.TY_ENUM_DEPTH_QUALITY
@@ -7247,7 +7345,7 @@ r"""not trigger mode, continuous mode"""
 TY_TRIGGER_MODE_SLAVE = _pcammls.TY_TRIGGER_MODE_SLAVE
 r"""slave mode, receive soft/hardware triggers"""
 TY_TRIGGER_MODE_M_SIG = _pcammls.TY_TRIGGER_MODE_M_SIG
-r"""master mode 1, sending one trigger signal once received a soft/hardware trigger"""
+r"""master mode 1, sending one trigger signal once received a soft trigger"""
 TY_TRIGGER_MODE_M_PER = _pcammls.TY_TRIGGER_MODE_M_PER
 r"""master mode 2, periodic sending one trigger signals, 'fps' param should be set"""
 TY_TRIGGER_MODE_SIG_PASS = _pcammls.TY_TRIGGER_MODE_SIG_PASS
@@ -7305,6 +7403,28 @@ TY_DI_INT_NO_OP = _pcammls.TY_DI_INT_NO_OP
 TY_DI_INT_TRIG_CAP = _pcammls.TY_DI_INT_TRIG_CAP
 
 TY_DI_INT_EVENT = _pcammls.TY_DI_INT_EVENT
+
+TY_TEMPERATURE_LEFT = _pcammls.TY_TEMPERATURE_LEFT
+
+TY_TEMPERATURE_RIGHT = _pcammls.TY_TEMPERATURE_RIGHT
+
+TY_TEMPERATURE_COLOR = _pcammls.TY_TEMPERATURE_COLOR
+
+TY_TEMPERATURE_CPU = _pcammls.TY_TEMPERATURE_CPU
+
+TY_TEMPERATURE_MAIN_BOARD = _pcammls.TY_TEMPERATURE_MAIN_BOARD
+
+TY_LOG_LEVEL_VERBOSE = _pcammls.TY_LOG_LEVEL_VERBOSE
+
+TY_LOG_LEVEL_DEBUG = _pcammls.TY_LOG_LEVEL_DEBUG
+
+TY_LOG_LEVEL_INFO = _pcammls.TY_LOG_LEVEL_INFO
+
+TY_LOG_LEVEL_WARNING = _pcammls.TY_LOG_LEVEL_WARNING
+
+TY_LOG_LEVEL_ERROR = _pcammls.TY_LOG_LEVEL_ERROR
+
+TY_LOG_LEVEL_NEVER = _pcammls.TY_LOG_LEVEL_NEVER
 
 class TY_VERSION_INFO(object):
     r"""Proxy of C++ TY_VERSION_INFO class."""
@@ -8255,6 +8375,55 @@ class TY_DI_WORKMODE(object):
 
 # Register TY_DI_WORKMODE in _pcammls:
 _pcammls.TY_DI_WORKMODE_swigregister(TY_DI_WORKMODE)
+class TY_TEMP_DATA(object):
+    r"""Proxy of C++ TY_TEMP_DATA class."""
+
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+    id = property(_pcammls.TY_TEMP_DATA_id_get, _pcammls.TY_TEMP_DATA_id_set, doc=r"""id""")
+    name = property(_pcammls.TY_TEMP_DATA_name_get, _pcammls.TY_TEMP_DATA_name_set, doc=r"""name""")
+    temp = property(_pcammls.TY_TEMP_DATA_temp_get, _pcammls.TY_TEMP_DATA_temp_set, doc=r"""temp""")
+    desc = property(_pcammls.TY_TEMP_DATA_desc_get, _pcammls.TY_TEMP_DATA_desc_set, doc=r"""desc""")
+
+    def __init__(self):
+        r"""__init__(self) -> TY_TEMP_DATA"""
+        _pcammls.TY_TEMP_DATA_swiginit(self, _pcammls.new_TY_TEMP_DATA())
+    __swig_destroy__ = _pcammls.delete_TY_TEMP_DATA
+
+# Register TY_TEMP_DATA in _pcammls:
+_pcammls.TY_TEMP_DATA_swigregister(TY_TEMP_DATA)
+class TY_CAMERA_ROTATION(object):
+    r"""
+      a 3x3 matrix
+     |.|.|.|
+     | --|---|---|
+     |r00|r01|r02|
+     |r10|r11|r12|
+     |r20|r21|r22|
+    See also: TYGetStruct
+     Usage:
+
+    .. code-block:: c++
+
+         TY_CAMERA_ROTATION rotation;
+         TYGetStruct(hDevice, some_compoent, TY_STRUCT_CAM_ROTATION, &rotation, sizeof(rotation));
+    """
+
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+    data = property(_pcammls.TY_CAMERA_ROTATION_data_get, _pcammls.TY_CAMERA_ROTATION_data_set, doc=r"""data""")
+
+    def CSize(self):
+        r"""c struct size"""
+        return _pcammls.TY_CAMERA_ROTATION_CSize(self)
+
+    def __init__(self):
+        r"""__init__(self) -> TY_CAMERA_ROTATION"""
+        _pcammls.TY_CAMERA_ROTATION_swiginit(self, _pcammls.new_TY_CAMERA_ROTATION())
+    __swig_destroy__ = _pcammls.delete_TY_CAMERA_ROTATION
+
+# Register TY_CAMERA_ROTATION in _pcammls:
+_pcammls.TY_CAMERA_ROTATION_swigregister(TY_CAMERA_ROTATION)
 
 def TYIsNetworkInterface(interfaceType):
     r"""
@@ -8338,47 +8507,107 @@ def TYImageHeight(imageMode):
     r"""get image height from image mode"""
     return _pcammls.TYImageHeight(imageMode)
 
-def TYErrorString(errorID):
-    r"""
-    Get error information.
-    :param [in]:  errorID       Error id.
-    :rtype: string
-    :return: Error string.
-    """
-    return _pcammls.TYErrorString(errorID)
-
-def TYInitLib():
-    r"""
-    Init this library.
-
-      We make this function to be static inline, because we do a version check here.
-      Some user may use the mismatched header file and dynamic library, and
-      that's quite difficult to locate the error.
-
-
-    """
-    return _pcammls.TYInitLib()
-
-def TYDeinitLib():
-    r"""
-    Deinit this library.
-
-    """
-    return _pcammls.TYDeinitLib()
+def _TYInitLib():
+    r"""_TYInitLib() -> TY_STATUS"""
+    return _pcammls._TYInitLib()
 
 def TYLibVersion(version):
     r"""
-    Get current library version.
-    :param [out]: version       Version infomation to be filled.
+    TYLibVersion(version) -> TY_STATUS
+
+    Parameters
+    ----------
+    version: TY_VERSION_INFO *
 
     """
     return _pcammls.TYLibVersion(version)
 
+def TYInitLib():
+    r"""TYInitLib() -> TY_STATUS"""
+    return _pcammls.TYInitLib()
+
+def TYErrorString(errorID):
+    r"""
+    Get error information.
+    :param [in]:  errorID       Error id.
+    """
+    return _pcammls.TYErrorString(errorID)
+
+def TYDeinitLib():
+    r"""Deinit this library."""
+    return _pcammls.TYDeinitLib()
+
+def TYSetLogLevel(lvl):
+    r"""
+    Set log level.
+    :param [in]:  lvl           Log level.
+    """
+    return _pcammls.TYSetLogLevel(lvl)
+
+def TYSetLogPrefix(prefix):
+    r"""
+    set log prefix
+    :param [in]:  prefix        Prefix string.
+              Suggestions:
+                Prefix is empty or prefix is too long, cannot be set
+                Like this:
+                  TYSetLogPrefix(prefix);
+                                 ^ prefix is empty or prefix is too long
+    """
+    return _pcammls.TYSetLogPrefix(prefix)
+
+def TYAppendLogToFile(filePath, lvl):
+    r"""
+    Append log to specified file.
+    :param [in]:  filePath      Path to the log file.
+    :param [in]:  lvl           Log level.
+              Suggestions:
+                Please check if the file path is correct and if you have permission to write to the file
+    """
+    return _pcammls.TYAppendLogToFile(filePath, lvl)
+
+def TYRemoveLogFile(filePath):
+    r"""
+    Remove log file.
+    :param [in]:  filePath      Path to the log file.
+              Suggestions:
+                Please check if the file path is correct
+    """
+    return _pcammls.TYRemoveLogFile(filePath)
+
+def TYAppendLogToServer(protocol, ip, port, lvl):
+    r"""
+    Append log to Tcp/Udp server.
+    :param [in]:  protocol      Protocol of the server, "tcp" or "udp".
+    :param [in]:  ip            IP address of the server.
+    :param [in]:  port          Port of the server.
+    :param [in]:  lvl           Log level.
+              Suggestions:
+                Please check if the ip and port are correct
+
+              Suggestions:
+                Unsupported protocol, please use tcp or udp
+    """
+    return _pcammls.TYAppendLogToServer(protocol, ip, port, lvl)
+
+def TYRemoveLogServer(protocol, ip, port):
+    r"""
+    Remove log server.
+    :param [in]:  protocol      Protocol of the server, "tcp" or "udp".
+    :param [in]:  ip            IP address of the server.
+    :param [in]:  port          Port of the server.
+              Suggestions:
+                Please check if the ip and port are correct
+
+              Suggestions:
+                Unsupported protocol, please use tcp or udp
+    """
+    return _pcammls.TYRemoveLogServer(protocol, ip, port)
+
 def TYUpdateInterfaceList():
     r"""
     Update current interfaces.
-    call before TYGetInterfaceList
-
+            call before TYGetInterfaceList
     """
     return _pcammls.TYUpdateInterfaceList()
 
@@ -8386,7 +8615,11 @@ def TYGetInterfaceNumber():
     r"""
     Get number of current interfaces.
     :param [out]: pNumIfaces    Number of interfaces.
-
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetInterfaceNumber(pNumIfaces);
+                                       ^ is NULL
     """
     return _pcammls.TYGetInterfaceNumber()
 
@@ -8396,7 +8629,11 @@ def TYGetInterfaceList(pIfaceInfos, bufferCount):
     :param [out]: pIfaceInfos   Array of interface infos to be filled.
     :param [in]:  bufferCount   Array size of interface infos.
     :param [out]: filledCount   Number of filled TY_INTERFACE_INFO.
-
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetInterfaceList(pIfaceInfos, bufferCount, filledCount);
+                                     ^     or     ^  is NULL
     """
     return _pcammls.TYGetInterfaceList(pIfaceInfos, bufferCount)
 
@@ -8405,6 +8642,12 @@ def TYHasInterface(ifaceID):
     Check if has interface.
     :param [in]:  ifaceID       Interface ID string, can be get from TY_INTERFACE_INFO.
     :param [out]: value         True if the interface exists.
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYHasInterface(ifaceID, value);
+                                          ^ is NULL
+
     See also: TYGetInterfaceList
     """
     return _pcammls.TYHasInterface(ifaceID)
@@ -8414,6 +8657,22 @@ def TYOpenInterface(ifaceID):
     Open specified interface.
     :param [in]:  ifaceID       Interface ID string, can be get from TY_INTERFACE_INFO.
     :param [out]: outHandle     Handle of opened interface.
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYOpenInterface(ifaceID, outHandle);
+                                  ^   or   ^ is NULL
+
+              Suggestions:
+                Please check ifaceID parameter
+                Like this:
+                  TYOpenInterface(ifaceID, outHandle);
+                                  ^ is invalid
+                Usually you get interface information by calling TYUpdateInterfaceList, TYGetInterfaceList
+                and then open interface by calling TYOpenInterface
+                When your host interface (network or USB) changes);
+                you may need to update interface list again
+
     See also: TYGetInterfaceList
     """
     return _pcammls.TYOpenInterface(ifaceID)
@@ -8422,7 +8681,16 @@ def TYCloseInterface(ifaceHandle):
     r"""
     Close interface.
     :param [in]:  ifaceHandle   Interface to be closed.
-
+              Suggestions:
+                Please check interface handle
+                Like this:
+                  TYCloseInterface(ifaceHandle);
+                                   ^ is invalid
+                The ifaceHandle parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenInterface failed to open interface and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated interface list by calling TYUpdateInterfaceList
     """
     return _pcammls.TYCloseInterface(ifaceHandle)
 
@@ -8430,15 +8698,21 @@ def TYUpdateDeviceList(ifaceHandle):
     r"""
     Update current connected devices.
     :param [in]:  ifaceHandle   Interface handle.
-
+              Suggestions:
+                Please check interface handle
+                Like this:
+                  TYUpdateDeviceList(ifaceHandle);
+                                     ^ is invalid
+                The ifaceHandle parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenInterface failed to open interface and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated interface list by calling TYUpdateInterfaceList
     """
     return _pcammls.TYUpdateDeviceList(ifaceHandle)
 
 def TYUpdateAllDeviceList():
-    r"""
-    Update current connected devices.
-
-    """
+    r"""Update current connected devices."""
     return _pcammls.TYUpdateAllDeviceList()
 
 def TYGetDeviceNumber(ifaceHandle):
@@ -8446,7 +8720,22 @@ def TYGetDeviceNumber(ifaceHandle):
     Get number of current connected devices.
     :param [in]:  ifaceHandle   Interface handle.
     :param [out]: deviceNumber  Number of connected devices.
+              Suggestions:
+                Please check interface handle
+                Like this:
+                  TYGetDeviceNumber(ifaceHandle, pDeviceNumber);
+                                    ^ is invalid
+                The ifaceHandle parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenInterface failed to open interface and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated interface list by calling TYUpdateInterfaceList
 
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetDeviceNumber(ifaceHandle, deviceNumber);
+                                                 ^ is NULL
     """
     return _pcammls.TYGetDeviceNumber(ifaceHandle)
 
@@ -8457,7 +8746,22 @@ def TYGetDeviceList(ifaceHandle, deviceInfos, bufferCount):
     :param [out]: deviceInfos   Device info array to be filled.
     :param [in]:  bufferCount   Array size of deviceInfos.
     :param [out]: filledDeviceCount     Number of filled TY_DEVICE_BASE_INFO.
+              Suggestions:
+                Please check interface handle
+                Like this:
+                  TYGetDeviceList(ifaceHandle, pDeviceInfos, bufferCount, pFilledDeviceCount);
+                                  ^ is invalid
+                The ifaceHandle parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenInterface failed to open interface and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated interface list by calling TYUpdateInterfaceList
 
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetDeviceList(ifaceHandle, pDeviceInfos, bufferCount, pFilledCount);
+                                               ^ is NULL or  ^ is 0    or ^ is NULL
     """
     return _pcammls.TYGetDeviceList(ifaceHandle, deviceInfos, bufferCount)
 
@@ -8467,7 +8771,22 @@ def TYHasDevice(ifaceHandle, deviceID):
     :param [in]:  ifaceHandle   Interface handle.
     :param [in]:  deviceID      Device ID string, can be get from TY_DEVICE_BASE_INFO.
     :param [out]: value         True if the device exists.
+              Suggestions:
+                Please check interface handle
+                Like this:
+                  TYHasDevice(ifaceHandle, deviceID, value);
+                              ^ is invalid
+                The ifaceHandle parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenInterface failed to open interface and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated interface list by calling TYUpdateInterfaceList
 
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYHasDevice(ifaceHandle, deviceID, value);
+                                           ^    or   ^ is NULL
     """
     return _pcammls.TYHasDevice(ifaceHandle, deviceID)
 
@@ -8476,9 +8795,58 @@ def TYOpenDevice(ifaceHandle, deviceID, outFwErrorcode=None):
     Open device by device ID.
     :param [in]:  ifaceHandle   Interface handle.
     :param [in]:  deviceID      Device ID string, can be get from TY_DEVICE_BASE_INFO.
-    :param [out]: deviceHandle  Handle of opened device. Valid only if TY_STATUS_OK or TY_FW_ERRORCODE returned.
+    :param [out]: outDeviceHandle Handle of opened device. Valid only if TY_STATUS_OK or TY_FW_ERRORCODE returned.
     :param [out]: outFwErrorcode  Firmware errorcode. Valid only if TY_FW_ERRORCODE returned.
+              Suggestions:
+                Please check interface handle
+                Like this:
+                  TYOpenDevice(ifaceHandle, deviceID, outDeviceHandle, outFwErrorcode);
+                               ^ is invalid
+                The ifaceHandle parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenInterface failed to open interface and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated interface list by calling TYUpdateInterfaceList
 
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYOpenDevice(ifaceHandle, deviceID, outDeviceHandle, outFwErrorcode);
+                                            ^    or   ^ is NULL
+
+              Suggestions:
+                Please check deviceID parameter
+                Like this:
+                  TYOpenDevice(ifaceHandle, deviceID, outDeviceHandle, outFwErrorcode);
+                                            ^ is invalid
+                Usually you get device information by calling TYUpdateDeviceList, TYGetDeviceList
+                and then open device by calling TYOpenDevice
+                When your device online status changes);
+                you may need to update device list again
+
+              Suggestions:
+                Possible reasons:
+                  1.Camera is occupied, please check if other processes on this machine (such as Percipio Viewer tool)
+                    or other host machines are occupying the camera. If the camera is occupied, release the occupation.
+                  2.A third-party program is written into the camera, please contact Percipio after-sales support.
+
+              Suggestions:
+                Some functions of the device may have exceptions, please check the firmware error code for details
+                TY_FW_ERRORCODE outFwErrorcode;
+                TYOpenDevice(ifaceHandle, deviceID, outDeviceHandle, &outFwErrorcode);
+                if(outFwErrorcode != 0) {
+                  parse_firmware_errcode(outFwErrorcode);
+                }
+
+              Suggestions:
+                Possible reasons:
+                  1.A third-party program is written into the camera, please contact Percipio after-sales support.
+                  2.The camera IP address is not in the same network segment as the host IP address.
+                    If the camera IP address is not in the same network segment as the host IP address, the host can discover the camera across network segments, but may not be able to open it.
+                    If there is a routing connection between your host and the camera, you can try to open the camera with TYOpenDeviceWithIP.
+                    Otherwise, you can modify the camera IP address or the host IP address.
+                    If you need to modify the camera IP address, please refer to Setting the IP address of the network depth camera.
+                  3.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
     """
     return _pcammls.TYOpenDevice(ifaceHandle, deviceID, outFwErrorcode)
 
@@ -8488,7 +8856,46 @@ def TYOpenDeviceWithIP(ifaceHandle, IP):
     :param [in]:  ifaceHandle   Interface handle.
     :param [in]:  IP            Device IP.
     :param [out]: deviceHandle  Handle of opened device.
+              Suggestions:
+                Please check interface handle
+                Like this:
+                  TYOpenDeviceWithIP(ifaceHandle, IP, outDeviceHandle);
+                                     ^ is invalid
+                The ifaceHandle parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenInterface failed to open interface and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated interface list by calling TYUpdateInterfaceList
 
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYOpenDeviceWithIP(ifaceHandle, IP, outDeviceHandle);
+                                                  ^ or^ is NULL
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYOpenDeviceWithIP(ifaceHandle, IP, outDeviceHandle);
+                                                  ^ is invalid
+                A valid IP address should be like:
+                  192.168.31.1
+                Usually you get device information by calling TYUpdateDeviceList, TYGetDeviceList
+                and then open device by calling TYOpenDevice
+                When your device online status changes,
+                you may need to update device list again
+
+              Suggestions:
+                Possible reasons:
+                  1.Camera is occupied, please check if other processes on this machine (such as Percipio Viewer tool)
+                    or other host machines are occupying the camera. If the camera is occupied, release the occupation.
+                  2.A third-party program is written into the camera, please contact Percipio after-sales support.
+
+              Suggestions:
+                Possible reasons:
+                  1.A third-party program is written into the camera, please contact Percipio after-sales support.
+                  2.The camera IP address cannot communicate with the host IP address through routing.
+                  3.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
     """
     return _pcammls.TYOpenDeviceWithIP(ifaceHandle, IP)
 
@@ -8497,7 +8904,22 @@ def TYGetDeviceInterface(hDevice):
     Get interface handle by device handle.
     :param [in]:  hDevice       Device handle.
     :param [out]: pIface        Interface handle.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetDeviceInterface(hDevice, pIface);
+                                       ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetDeviceInterface(hDevice, pIface);
+                                                ^ is NULL
     """
     return _pcammls.TYGetDeviceInterface(hDevice)
 
@@ -8509,7 +8931,53 @@ def TYForceDeviceIP(ifaceHandle, MAC, newIP, newNetMask, newGateway):
     :param [in]:  newIP         New IP.
     :param [in]:  newNetMask    New subnet mask.
     :param [in]:  newGateway    New gateway.
+              Suggestions:
+                Please check interface handle
+                Like this:
+                  TYForceDeviceIP(ifaceHandle, MAC, newIP, newNetMask, newGateway);
+                                  ^ is invalid
+                The ifaceHandle parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenInterface failed to open interface and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated interface list by calling TYUpdateInterfaceList
 
+              Suggestions:
+                Please check interface type
+                Usually you can get interface information by calling TYGetInterfaceList
+                You can use TYIsNetworkInterface to check the interface type
+                Only network interfaces can call TYForceDeviceIP
+                Like this:
+                  TY_INTERFACE_INFO info; uint32_t num;
+                  TYGetInterfaceList(&info, 1, &num);
+                  if(TYIsNetworkInterface(info[0].type)) {
+                    TY_INTERFACE_HANDLE hIface;
+                    TYOpenInterface(info[0].id, &hIface);
+                    TYForceDeviceIP(hIface, MAC, newIP, newNetMask, newGateway);
+                  }
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYForceDeviceIP(ifaceHandle, MAC, newIP, newNetMask, newGateway);
+                                               ^ or ^  or  ^     or    ^ is NULL
+
+              Suggestions:
+                Please check MAC parameter
+                Like this:
+                  TYForceDeviceIP(ifaceHandle, MAC, newIP, newNetMask, newGateway);
+                                               ^ is invalid
+                MAC address should be six bytes of hexadecimal separated by colons
+                For example: 00:11:22:aa:bb:cc
+
+              Suggestions:
+                Possible reasons:
+                  1.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+                  2.There is no camera with a matching target MAC address in the network.
+
+              Suggestions:
+                Possible reasons:
+                  1.New IP, NetMask, Gateway are incorrect, camera device refuses to set, or camera device is abnormal.
     """
     return _pcammls.TYForceDeviceIP(ifaceHandle, MAC, newIP, newNetMask, newGateway)
 
@@ -8517,7 +8985,25 @@ def TYCloseDevice(hDevice, reboot=False):
     r"""
     Close device by device handle.
     :param [in]:  hDevice       Device handle.
+    :param [in]:  reboot        Reboot device after close.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYCloseDevice(hDevice, reboot);
+                                ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Possible reasons:
+                  1.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+
+              Suggestions:
+                Possible reasons:
+                  1.Camera device is abnormal and cannot be closed normally.
     """
     return _pcammls.TYCloseDevice(hDevice, reboot)
 
@@ -8526,7 +9012,22 @@ def TYGetDeviceInfo(hDevice, info):
     Get base info of the open device.
     :param [in]:  hDevice       Device handle.
     :param [out]: info          Base info out.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetDeviceInfo(hDevice, info);
+                                  ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetDeviceInfo(hDevice, info);
+                                           ^ is NULL
     """
     return _pcammls.TYGetDeviceInfo(hDevice, info)
 
@@ -8535,6 +9036,23 @@ def TYGetComponentIDs(hDevice):
     Get all components IDs.
     :param [in]:  hDevice       Device handle.
     :param [out]: componentIDs  All component IDs this device has. (bit flag).
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetComponentIDs(hDevice, outComponentIDs);
+                                    ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetComponentIDs(hDevice, outComponentIDs);
+                                             ^ is NULL
+
     See also: TY_DEVICE_COMPONENT_LIST
     """
     return _pcammls.TYGetComponentIDs(hDevice)
@@ -8544,6 +9062,17 @@ def TYGetEnabledComponents(hDevice):
     Get all enabled components IDs.
     :param [in]:  hDevice       Device handle.
     :param [out]: componentIDs  Enabled component IDs.(bit flag)
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetEnabledComponents(hDevice, componentIDs);
+                                         ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
+
     See also: TY_DEVICE_COMPONENT_LIST
     """
     return _pcammls.TYGetEnabledComponents(hDevice)
@@ -8553,7 +9082,32 @@ def TYEnableComponents(hDevice, componentIDs):
     Enable components.
     :param [in]:  hDevice       Device handle.
     :param [in]:  componentIDs  Components to be enabled.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYEnableComponents(hDevice, componentIDs);
+                                     ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentIDs parameter
+                Like this:
+                  TYEnableComponents(hDevice, componentIDs);
+                                              ^ is invalid
+                componentIDs should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please call TYEnableComponents when the camera device is stopped
+                Like this:
+                  TYStopCapture(hDevice);
+                  TYEnableComponents(hDevice, componentIDs);
+
+    See also: TY_DEVICE_COMPONENT_LIST
     """
     return _pcammls.TYEnableComponents(hDevice, componentIDs)
 
@@ -8562,6 +9116,31 @@ def TYDisableComponents(hDevice, componentIDs):
     Disable components.
     :param [in]:  hDevice       Device handle.
     :param [in]:  componentIDs  Components to be disabled.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYDisableComponents(hDevice, componentIDs);
+                                      ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
+
+              Suggestions:
+                Please check componentIDs parameter
+                Like this:
+                  TYDisableComponents(hDevice, componentIDs);
+                                                ^ is invalid
+                componentIDs should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please call TYEnableComponents when the camera device is stopped
+                Like this:
+                  TYStopCapture(hDevice);
+                  TYDisableComponents(hDevice, componentIDs);
+
     See also: TY_DEVICE_COMPONENT_LIST
     """
     return _pcammls.TYDisableComponents(hDevice, componentIDs)
@@ -8571,7 +9150,30 @@ def TYGetFrameBufferSize(hDevice):
     Get total buffer size of one frame in current configuration.
     :param [in]:  hDevice       Device handle.
     :param [out]: bufferSize    Buffer size per frame.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetFrameBufferSize(hDevice, outSize);
+                                       ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetFrameBufferSize(hDevice, outSize);
+                                                ^ is NULL
+
+              Suggestions:
+                Possible reasons:
+                 1.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+
+              Suggestions:
+                Possible reasons:
+                 1.Camera device is abnormal and cannot get the frame buffer size.
     """
     return _pcammls.TYGetFrameBufferSize(hDevice)
 
@@ -8581,7 +9183,36 @@ def TYEnqueueBuffer(hDevice, buffer, bufferSize):
     :param [in]:  hDevice       Device handle.
     :param [in]:  buffer        Buffer to be enqueued.
     :param [in]:  bufferSize    Size of the input buffer.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYEnqueueBuffer(hDevice, buffer, bufferSize);
+                                  ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYEnqueueBuffer(hDevice, buffer, bufferSize);
+                                           ^ is NULL
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYEnqueueBuffer(hDevice, buffer, bufferSize);
+                                                   ^ is 0 or negative value
+
+              Suggestions:
+                Possible reasons:
+                 1.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+
+              Suggestions:
+                Possible reasons:
+                 1.Camera device is abnormal and cannot get the frame buffer size.
     """
     return _pcammls.TYEnqueueBuffer(hDevice, buffer, bufferSize)
 
@@ -8589,7 +9220,16 @@ def TYClearBufferQueue(hDevice):
     r"""
     Clear the internal buffer queue, so that user can release all the buffer.
     :param [in]:  hDevice       Device handle.
-
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYClearBufferQueue(hDevice);
+                                     ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
     """
     return _pcammls.TYClearBufferQueue(hDevice)
 
@@ -8597,7 +9237,34 @@ def TYStartCapture(hDevice):
     r"""
     Start capture.
     :param [in]:  hDevice       Device handle.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYStartCapture(hDevice);
+                                 ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please enable the components of the camera device first
+                Like this:
+                  TYEnableComponents(hDevice, componentIDs);
+                  TYStartCapture(hDevice);
+
+              Suggestions:
+                Please stop the camera device first
+                Like this:
+                  TYStopCapture(hDevice);
+                  TYStartCapture(hDevice);
+
+              Suggestions:
+                Possible reasons:
+                  1.Camera device is abnormal and cannot start the camera.
+                  2.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+                  3.Camera is busy, please try again
     """
     return _pcammls.TYStartCapture(hDevice)
 
@@ -8605,7 +9272,26 @@ def TYStopCapture(hDevice):
     r"""
     Stop capture.
     :param [in]:  hDevice       Device handle.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYStopCapture(hDevice);
+                                ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                The camera device has stopped, usually after starting
+                Like this:
+                  TYStartCapture(hDevice);
+                  TYStopCapture(hDevice);
+
+              Suggestions:
+                Possible reasons:
+                  1.Camera device is abnormal and cannot stop the camera.
     """
     return _pcammls.TYStopCapture(hDevice)
 
@@ -8613,7 +9299,31 @@ def TYSendSoftTrigger(hDevice):
     r"""
     Send a software trigger to capture a frame when device works in trigger mode.
     :param [in]:  hDevice       Device handle.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYSendSoftTrigger(hDevice);
+                                    ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please start the camera device first
+                Like this:
+                  TYStartCapture(hDevice);
+                  TYSendSoftTrigger(hDevice);
+
+              Suggestions:
+                Possible reasons:
+                  1.Camera device is abnormal and cannot send soft trigger.
+                  2.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+
+              Suggestions:
+                Possible reasons:
+                  1.Camera is busy, the last soft trigger is not completed, please try again.
     """
     return _pcammls.TYSendSoftTrigger(hDevice)
 
@@ -8623,7 +9333,16 @@ def TYRegisterEventCallback(hDevice, callback, userdata):
     :param [in]:  hDevice       Device handle.
     :param [in]:  callback      Callback function.
     :param [in]:  userdata      User private data.
-
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYRegisterEventCallback(hDevice, callback, userdata);
+                                          ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
     """
     return _pcammls.TYRegisterEventCallback(hDevice, callback, userdata)
 
@@ -8633,7 +9352,16 @@ def TYRegisterImuCallback(hDevice, callback, userdata):
     :param [in]:  hDevice       Device handle.
     :param [in]:  callback      Callback function.
     :param [in]:  userdata      User private data.
-
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYRegisterImuCallback(hDevice, callback, userdata);
+                                        ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
     """
     return _pcammls.TYRegisterImuCallback(hDevice, callback, userdata)
 
@@ -8643,18 +9371,68 @@ def TYFetchFrame(hDevice, frame, timeout):
     :param [in]:  hDevice       Device handle.
     :param [out]: frame         Frame data to be filled.
     :param [in]:  timeout       Timeout in milliseconds. <0 for infinite.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYFetchFrame(hDevice, pFrame, timeout);
+                               ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYFetchFrame(hDevice, pFrame, timeout);
+                                        ^ is NULL
+
+              Suggestions:
+                Please start the camera device first
+                Like this:
+                  TYStartCapture(hDevice);
+                  TYFetchFrame(hDevice, pFrame, timeout);
+
+              Suggestions:
+                Possible reasons:
+                  1.Camera device is abnormal and cannot get frame.
+                  2.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+                  3.Timeout, frame acquisition timeout
     """
     return _pcammls.TYFetchFrame(hDevice, frame, timeout)
 
 def TYHasFeature(hDevice, componentID, featureID):
     r"""
-    Check  whether a component has a specific feature.
+    Check whether a component has a specific feature.
     :param [in]:  hDevice       Device handle.
     :param [in]:  componentID   Component ID.
     :param [in]:  featureID     Feature ID.
     :param [out]: value         Whether has feature.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYHasFeature(hDevice, componentID, featureID, value);
+                               ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYHasFeature(hDevice, componentID, featureID, value);
+                                        ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYHasFeature(hDevice, componentID, featureID, value);
+                                                                ^ is NULL
     """
     return _pcammls.TYHasFeature(hDevice, componentID, featureID)
 
@@ -8665,7 +9443,39 @@ def TYGetFeatureInfo(hDevice, componentID, featureID, featureInfo):
     :param [in]:  componentID   Component ID.
     :param [in]:  featureID     Feature ID.
     :param [out]: featureInfo   Feature info.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetFeatureInfo(hDevice, componentID, featureID, pFeatureInfo);
+                                   ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYGetFeatureInfo(hDevice, componentID, featureID, pFeatureInfo);
+                                            ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYGetFeatureInfo(hDevice, componentID, featureID, pFeatureInfo);
+                                                         ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetFeatureInfo(hDevice, componentID, featureID, pFeatureInfo);
+                                                                    ^ is NULL
     """
     return _pcammls.TYGetFeatureInfo(hDevice, componentID, featureID, featureInfo)
 
@@ -8676,7 +9486,46 @@ def TYGetIntRange(hDevice, componentID, featureID, intRange):
     :param [in]:  componentID   Component ID.
     :param [in]:  featureID     Feature ID.
     :param [out]: intRange      Integer range to be filled.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetIntRange(hDevice, componentID, featureID, pIntRange);
+                                ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYGetIntRange(hDevice, componentID, featureID, pIntRange);
+                                         ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYGetIntRange(hDevice, componentID, featureID, pIntRange);
+                                                      ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYGetIntRange(hDevice, componentID, featureID, pIntRange);
+                                                      ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetIntRange(hDevice, componentID, featureID, pIntRange);
+                                                                 ^ is NULL
     """
     return _pcammls.TYGetIntRange(hDevice, componentID, featureID, intRange)
 
@@ -8687,7 +9536,55 @@ def TYGetInt(hDevice, componentID, featureID):
     :param [in]:  componentID   Component ID.
     :param [in]:  featureID     Feature ID.
     :param [out]: value         Integer value.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetInt(hDevice, componentID, featureID, pValue);
+                           ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYGetInt(hDevice, componentID, featureID, pValue);
+                                    ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYGetInt(hDevice, componentID, featureID, pValue);
+                                                 ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYGetInt(hDevice, componentID, featureID, pValue);
+                                                 ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetInt(hDevice, componentID, featureID, pValue);
+                                                            ^ is NULL
+
+              Suggestions:
+                Possible reasons:
+                  1.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+
+              Suggestions:
+                Possible reasons:
+                  1.The feature of the camera device is not available or not implemented
+                  2.Camera device is abnormal and cannot get int feature
     """
     return _pcammls.TYGetInt(hDevice, componentID, featureID)
 
@@ -8698,7 +9595,56 @@ def TYSetInt(hDevice, componentID, featureID, value):
     :param [in]:  componentID   Component ID.
     :param [in]:  featureID     Feature ID.
     :param [in]:  value         Integer value.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYSetInt(hDevice, componentID, featureID, value);
+                           ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYSetInt(hDevice, componentID, featureID, value);
+                                    ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYSetInt(hDevice, componentID, featureID, value);
+                                                 ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYSetInt(hDevice, componentID, featureID, value);
+                                                 ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Please check the value
+                Like this:
+                  TYSetInt(hDevice, componentID, featureID, value);
+                                                            ^ is out of range
+                The value is out of range, please use TYGetIntRange to get the range or check the camera xml description file
+
+              Suggestions:
+                Possible reasons:
+                  1.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+
+              Suggestions:
+                Possible reasons:
+                  1.The feature of the camera device is not available or not implemented
+                  2.Camera device is abnormal and cannot set int feature
     """
     return _pcammls.TYSetInt(hDevice, componentID, featureID, value)
 
@@ -8709,7 +9655,46 @@ def TYGetFloatRange(hDevice, componentID, featureID, floatRange):
     :param [in]:  componentID   Component ID.
     :param [in]:  featureID     Feature ID.
     :param [out]: floatRange    Float range to be filled.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetFloatRange(hDevice, componentID, featureID, pFloatRange);
+                                  ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYGetFloatRange(hDevice, componentID, featureID, pFloatRange);
+                                           ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYGetFloatRange(hDevice, componentID, featureID, pFloatRange);
+                                                        ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYGetFloatRange(hDevice, componentID, featureID, pFloatRange);
+                                                        ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetFloatRange(hDevice, componentID, featureID, pFloatRange);
+                                                                   ^ is NULL
     """
     return _pcammls.TYGetFloatRange(hDevice, componentID, featureID, floatRange)
 
@@ -8720,7 +9705,55 @@ def TYGetFloat(hDevice, componentID, featureID):
     :param [in]:  componentID   Component ID.
     :param [in]:  featureID     Feature ID.
     :param [out]: value         Float value.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetFloat(hDevice, componentID, featureID, pValue);
+                             ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYGetFloat(hDevice, componentID, featureID, pValue);
+                                      ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYGetFloat(hDevice, componentID, featureID, pValue);
+                                                   ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYGetFloat(hDevice, componentID, featureID, pValue);
+                                                   ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetFloat(hDevice, componentID, featureID, pValue);
+                                                              ^ is NULL
+
+              Suggestions:
+                Possible reasons:
+                  1.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+
+              Suggestions:
+                Possible reasons:
+                  1.The feature of the camera device is not available or not implemented
+                  2.Camera device is abnormal and cannot get float feature
     """
     return _pcammls.TYGetFloat(hDevice, componentID, featureID)
 
@@ -8731,7 +9764,56 @@ def TYSetFloat(hDevice, componentID, featureID, value):
     :param [in]:  componentID   Component ID.
     :param [in]:  featureID     Feature ID.
     :param [in]:  value         Float value.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYSetFloat(hDevice, componentID, featureID, value);
+                             ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYSetFloat(hDevice, componentID, featureID, value);
+                                      ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYSetFloat(hDevice, componentID, featureID, value);
+                                                   ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYSetFloat(hDevice, componentID, featureID, value);
+                                                   ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Please check the value
+                Like this:
+                  TYSetFloat(hDevice, componentID, featureID, value);
+                                                              ^ is out of range
+                The value is out of range, please use TYGetFloatRange to get the range or check the camera xml description file
+
+              Suggestions:
+                Possible reasons:
+                  1.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+
+              Suggestions:
+                Possible reasons:
+                  1.The feature of the camera device is not available or not implemented
+                  2.Camera device is abnormal and cannot set float feature
     """
     return _pcammls.TYSetFloat(hDevice, componentID, featureID, value)
 
@@ -8742,7 +9824,46 @@ def TYGetEnumEntryCount(hDevice, componentID, featureID):
     :param [in]:  componentID   Component ID.
     :param [in]:  featureID     Feature ID.
     :param [out]: entryCount    Entry count.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetEnumEntryCount(hDevice, componentID, featureID, pEntryCount);
+                                      ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYGetEnumEntryCount(hDevice, componentID, featureID, pEntryCount);
+                                               ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYGetEnumEntryCount(hDevice, componentID, featureID, pEntryCount);
+                                                             ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYGetEnumEntryCount(hDevice, componentID, featureID, pEntryCount);
+                                                            ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetEnumEntryCount(hDevice, componentID, featureID, pEntryCount);
+                                                                       ^ is NULL
     """
     return _pcammls.TYGetEnumEntryCount(hDevice, componentID, featureID)
 
@@ -8755,7 +9876,46 @@ def TYGetEnumEntryInfo(hDevice, componentID, featureID, entries, entryCount):
     :param [out]: entries       Output entries.
     :param [in]:  entryCount    Array size of input parameter "entries".
     :param [out]: filledEntryCount      Number of filled entries.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetEnumEntryInfo(hDevice, componentID, featureID, entries, entryCount, filledEntryCount);
+                                     ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYGetEnumEntryInfo(hDevice, componentID, featureID, entries, entryCount, filledEntryCount);
+                                              ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYGetEnumEntryInfo(hDevice, componentID, featureID, entries, entryCount, filledEntryCount);
+                                                           ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYGetEnumEntryInfo(hDevice, componentID, featureID, entries, entryCount, filledEntryCount);
+                                                           ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetEnumEntryInfo(hDevice, componentID, featureID, pEnumDescription, entryCount, pFilledEntryCount);
+                                                                      ^              or             ^ is NULL
     """
     return _pcammls.TYGetEnumEntryInfo(hDevice, componentID, featureID, entries, entryCount)
 
@@ -8766,7 +9926,55 @@ def TYGetEnum(hDevice, componentID, featureID, value):
     :param [in]:  componentID   Component ID.
     :param [in]:  featureID     Feature ID.
     :param [out]: value         Enum value.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetEnum(hDevice, componentID, featureID, pValue);
+                            ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYGetEnum(hDevice, componentID, featureID, pValue);
+                                     ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYGetEnum(hDevice, componentID, featureID, pValue);
+                                                  ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYGetEnum(hDevice, componentID, featureID, pValue);
+                                                  ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetEnum(hDevice, componentID, featureID, pValue);
+                                                             ^ is NULL
+
+              Suggestions:
+                Possible reasons:
+                  1.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+
+              Suggestions:
+                Possible reasons:
+                  1.The feature of the camera device is not available or not implemented
+                  2.Camera device is abnormal and cannot get enum feature
     """
     return _pcammls.TYGetEnum(hDevice, componentID, featureID, value)
 
@@ -8777,7 +9985,56 @@ def TYSetEnum(hDevice, componentID, featureID, value):
     :param [in]:  componentID   Component ID.
     :param [in]:  featureID     Feature ID.
     :param [in]:  value         Enum value.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYSetEnum(hDevice, componentID, featureID, value);
+                            ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYSetEnum(hDevice, componentID, featureID, value);
+                                     ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYSetEnum(hDevice, componentID, featureID, value);
+                                                  ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYSetEnum(hDevice, componentID, featureID, value);
+                                                  ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Please check the value
+                Like this:
+                  TYSetEnum(hDevice, componentID, featureID, value);
+                                                             ^ is out of range
+                The value is out of range, please use TYGetEnumEntryInfo to get the range or check the camera xml description file
+
+              Suggestions:
+                Possible reasons:
+                  1.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+
+              Suggestions:
+                Possible reasons:
+                  1.The feature of the camera device is not available or not implemented
+                  2.Camera device is abnormal and cannot set enum feature
     """
     return _pcammls.TYSetEnum(hDevice, componentID, featureID, value)
 
@@ -8788,7 +10045,55 @@ def TYGetBool(hDevice, componentID, featureID):
     :param [in]:  componentID   Component ID.
     :param [in]:  featureID     Feature ID.
     :param [out]: value         Bool value.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetBool(hDevice, componentID, featureID, pValue);
+                            ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYGetBool(hDevice, componentID, featureID, pValue);
+                                     ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYGetBool(hDevice, componentID, featureID, pValue);
+                                                  ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYGetBool(hDevice, componentID, featureID, pValue);
+                                                  ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetBool(hDevice, componentID, featureID, pValue);
+                                                             ^ is NULL
+
+              Suggestions:
+                Possible reasons:
+                  1.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+
+              Suggestions:
+                Possible reasons:
+                  1.The feature of the camera device is not available or not implemented
+                  2.Camera device is abnormal and cannot get bool feature
     """
     return _pcammls.TYGetBool(hDevice, componentID, featureID)
 
@@ -8799,7 +10104,49 @@ def TYSetBool(hDevice, componentID, featureID, value):
     :param [in]:  componentID   Component ID.
     :param [in]:  featureID     Feature ID.
     :param [in]:  value         Bool value.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYSetBool(hDevice, componentID, featureID, value);
+                            ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYSetBool(hDevice, componentID, featureID, value);
+                                     ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYSetBool(hDevice, componentID, featureID, value);
+                                                  ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYSetBool(hDevice, componentID, featureID, value);
+                                                  ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Possible reasons:
+                  1.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+
+              Suggestions:
+                Possible reasons:
+                  1.The feature of the camera device is not available or not implemented
+                  2.Camera device is abnormal and cannot set bool feature
     """
     return _pcammls.TYSetBool(hDevice, componentID, featureID, value)
 
@@ -8810,6 +10157,47 @@ def TYGetStringLength(hDevice, componentID, featureID, size):
     :param [in]:  componentID   Component ID.
     :param [in]:  featureID     Feature ID.
     :param [out]: size          String length including ''.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetString(hDevice, componentID, featureID, buffer, bufferSize);
+                              ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
+
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYGetString(hDevice, componentID, featureID, buffer, bufferSize);
+                                       ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYGetString(hDevice, componentID, featureID, buffer, bufferSize);
+                                                    ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYGetString(hDevice, componentID, featureID, buffer, bufferSize);
+                                                    ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetStringLength(hDevice, componentID, featureID, pLength);
+                                                                     ^ is NULL
+
     See also: TYGetString
     """
     return _pcammls.TYGetStringLength(hDevice, componentID, featureID, size)
@@ -8822,6 +10210,56 @@ def TYGetString(hDevice, componentID, featureID, buffer, bufferSize):
     :param [in]:  featureID     Feature ID.
     :param [out]: buffer        String buffer.
     :param [in]:  bufferSize    Size of buffer.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetString(hDevice, componentID, featureID, buffer, bufferSize);
+                              ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
+
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYGetString(hDevice, componentID, featureID, buffer, bufferSize);
+                                       ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYGetString(hDevice, componentID, featureID, buffer, bufferSize);
+                                                    ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYGetString(hDevice, componentID, featureID, buffer, bufferSize);
+                                                    ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetString(hDevice, componentID, featureID, pBuffer, bufferSize);
+                                                               ^ is NULL
+
+              Suggestions:
+                Possible reasons:
+                  1.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+
+              Suggestions:
+                Possible reasons:
+                  1.The feature of the camera device is not available or not implemented
+                  2.Camera device is abnormal and cannot get string feature
+
     See also: TYGetStringLength
     """
     return _pcammls.TYGetString(hDevice, componentID, featureID, buffer, bufferSize)
@@ -8833,7 +10271,55 @@ def TYSetString(hDevice, componentID, featureID, buffer):
     :param [in]:  componentID   Component ID.
     :param [in]:  featureID     Feature ID.
     :param [in]:  buffer        String buffer.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYSetString(hDevice, componentID, featureID, pBuffer);
+                              ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYSetString(hDevice, componentID, featureID, pBuffer);
+                                       ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYSetString(hDevice, componentID, featureID, pBuffer);
+                                                    ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYSetString(hDevice, componentID, featureID, pBuffer);
+                                                    ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYSetString(hDevice, componentID, featureID, pBuffer);
+                                                               ^ is NULL
+
+              Suggestions:
+                Possible reasons:
+                  1.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+
+              Suggestions:
+                Possible reasons:
+                  1.The feature of the camera device is not available or not implemented
+                  2.Camera device is abnormal and cannot set string feature
     """
     return _pcammls.TYSetString(hDevice, componentID, featureID, buffer)
 
@@ -8844,8 +10330,63 @@ def TYGetStruct(hDevice, componentID, featureID, pStruct, structSize):
     :param [in]:  componentID   Component ID.
     :param [in]:  featureID     Feature ID.
     :param [out]: pStruct       Pointer of struct.
-    :param [in]:  structSize    Size of input buffer pStruct..
+    :param [in]:  structSize    Size of input buffer pStruct.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetStruct(hDevice, componentID, featureID, pStruct, structSize);
+                              ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYGetStruct(hDevice, componentID, featureID, pStruct, structSize);
+                                       ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYGetStruct(hDevice, componentID, featureID, pStruct, structSize);
+                                                    ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYGetStruct(hDevice, componentID, featureID, pStruct, structSize);
+                                                    ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetStruct(hDevice, componentID, featureID, pStruct, structSize);
+                                                               ^ is NULL
+
+              Suggestions:
+                Please check the struct size
+                Like this:
+                  TYGetStruct(hDevice, componentID, featureID, pStruct, structSize);
+                                                                        ^ is invalid
+                The struct size you entered does not match
+
+              Suggestions:
+                Possible reasons:
+                  1.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+
+              Suggestions:
+                Possible reasons:
+                  1.The feature of the camera device is not available or not implemented
+                  2.Camera device is abnormal and cannot get struct feature
     """
     return _pcammls.TYGetStruct(hDevice, componentID, featureID, pStruct, structSize)
 
@@ -8857,28 +10398,338 @@ def TYSetStruct(hDevice, componentID, featureID, pStruct, structSize):
     :param [in]:  featureID     Feature ID.
     :param [in]:  pStruct       Pointer of struct.
     :param [in]:  structSize    Size of struct.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYSetStruct(hDevice, componentID, featureID, pStruct, structSize);
+                              ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYSetStruct(hDevice, componentID, featureID, pStruct, structSize);
+                                       ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYSetStruct(hDevice, componentID, featureID, pStruct, structSize);
+                                                    ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYSetStruct(hDevice, componentID, featureID, pStruct, structSize);
+                                                    ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYSetStruct(hDevice, componentID, featureID, pStruct, structSize);
+                                                               ^ is NULL
+
+              Suggestions:
+                Please check the struct size
+                Like this:
+                  TYSetStruct(hDevice, componentID, featureID, pStruct, structSize);
+                                                                        ^ is invalid
+                The struct size you entered does not match
+
+              Suggestions:
+                Possible reasons:
+                  1.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+
+              Suggestions:
+                Possible reasons:
+                  1.The feature of the camera device is not available or not implemented
+                  2.Camera device is abnormal and cannot set struct feature
     """
     return _pcammls.TYSetStruct(hDevice, componentID, featureID, pStruct, structSize)
 
 def TYGetByteArraySize(hDevice, componentID, featureID):
     r"""
-    Get the size of specified byte array zone .
+    Get the size of specified byte array zone.
     :param [in]:  hDevice       Device handle.
     :param [in]:  componentID   Component ID.
     :param [in]:  featureID     Feature ID.
-    :param [out]: pSize         size of specified byte array zone.
+    :param [out]: pSize         Size of specified byte array zone.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetByteArraySize(hDevice, componentID, featureID, pSize);
+                                     ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYGetByteArraySize(hDevice, componentID, featureID, pSize);
+                                              ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYGetByteArraySize(hDevice, componentID, featureID, pSize);
+                                                           ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYGetByteArraySize(hDevice, componentID, featureID, pSize);
+                                                           ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetByteArraySize(hDevice, componentID, featureID, pSize);
+                                                                      ^ is NULL
     """
     return _pcammls.TYGetByteArraySize(hDevice, componentID, featureID)
 
+def TYGetByteArray(hDevice, componentID, featureID, pBuffer, bufferSize):
+    r"""
+    Read byte array from device.
+    :param [in]:  hDevice       Device handle.
+    :param [in]: componentID   Component ID.
+    :param [in]:  featureID     Feature ID.
+    :param [out]: pBuffer       Byte buffer.
+    :param [in]:  bufferSize    Size of buffer.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetByteArray(hDevice, componentID, featureID, buffer, bufferSize);
+                                 ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
+
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYGetByteArray(hDevice, componentID, featureID, buffer, bufferSize);
+                                          ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYGetByteArray(hDevice, componentID, featureID, buffer, bufferSize);
+                                                       ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYGetByteArray(hDevice, componentID, featureID, buffer, bufferSize);
+                                                       ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetByteArray(hDevice, componentID, featureID, pBuffer, bufferSize);
+                                                                  ^ is NULL
+
+              Suggestions:
+                Please check the array size
+                Like this:
+                  TYGetByteArray(hDevice, componentID, featureID, buffer, bufferSize);
+                                                                          ^ is invalid
+                The array size you entered does not match
+
+              Suggestions:
+                Possible reasons:
+                  1.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+
+              Suggestions:
+                Possible reasons:
+                  1.The feature of the camera device is not available or not implemented
+                  2.Camera device is abnormal and cannot get byte array feature
+    """
+    return _pcammls.TYGetByteArray(hDevice, componentID, featureID, pBuffer, bufferSize)
+
+def TYSetByteArray(hDevice, componentID, featureID, pBuffer, bufferSize):
+    r"""
+    Write byte array to device.
+    :param [in]:  hDevice       Device handle.
+    :param [in]: componentID   Component ID.
+    :param [in]:  featureID     Feature ID.
+    :param [out]: pBuffer       Byte buffer.
+    :param [in]:  bufferSize    Size of buffer.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYSetByteArray(hDevice, componentID, featureID, pBuffer, bufferSize);
+                                 ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
+
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYSetByteArray(hDevice, componentID, featureID, pBuffer, bufferSize);
+                                          ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYSetByteArray(hDevice, componentID, featureID, pBuffer, bufferSize);
+                                                       ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYSetByteArray(hDevice, componentID, featureID, pBuffer, bufferSize);
+                                                       ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYSetByteArray(hDevice, componentID, featureID, pBuffer, bufferSize);
+                                                                  ^ is NULL
+
+              Suggestions:
+                Please check the array size
+                Like this:
+                  TYSetByteArray(hDevice, componentID, featureID, pBuffer, bufferSize);
+                                                                           ^ is invalid
+                The array size you entered does not match
+
+              Suggestions:
+                Possible reasons:
+                  1.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+
+              Suggestions:
+                Possible reasons:
+                  1.The feature of the camera device is not available or not implemented
+                  2.Camera device is abnormal and cannot set byte array feature
+    """
+    return _pcammls.TYSetByteArray(hDevice, componentID, featureID, pBuffer, bufferSize)
+
+def TYGetByteArrayAttr(hDevice, componentID, featureID, pAttr):
+    r"""
+    Write byte array to device.
+    :param [in]:  hDevice       Device handle.
+    :param [in]: componentID   Component ID.
+    :param [in]:  featureID     Feature ID.
+    :param [out]: pAttr         Byte array attribute to be filled.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetByteArrayAttr(hDevice, componentID, featureID, pAttr);
+                                     ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
+
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYGetByteArrayAttr(hDevice, componentID, featureID, pAttr);
+                                              ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check featureID parameter
+                Like this:
+                  TYGetByteArrayAttr(hDevice, componentID, featureID, pAttr);
+                                                           ^ is invalid
+                You entered an invalid featureID parameter
+                You can get a list of features of the camera device through TYGetFeatureList
+                You can also view the features of the camera device by obtaining the xml description file of the camera
+
+              Suggestions:
+                Please check the feature type
+                Like this:
+                  TYGetByteArrayAttr(hDevice, componentID, featureID, pAttr);
+                                                           ^ type mismatch
+                The feature type you entered does not match. You can use TYFeatureType to check the feature type
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetByteArrayAttr(hDevice, componentID, featureID, pAttr);
+                                                                      ^ is NULL
+    """
+    return _pcammls.TYGetByteArrayAttr(hDevice, componentID, featureID, pAttr)
+
 def TYGetDeviceFeatureNumber(hDevice, componentID, size):
     r"""
-    Get the size of device features .
+    Get the size of device features.
     :param [in]:  hDevice       Device handle.
     :param [in]:  componentID   Component ID.
-    :param [out]: pSize         size of all feature cnt.
+    :param [out]: size          Size of all feature cnt.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetDeviceFeatureNumber(hDevice, componentID, size);
+                                           ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYGetDeviceFeatureNumber(hDevice, componentID, size);
+                                                    ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetDeviceFeatureNumber(hDevice, componentID, size);
+                                                                 ^ is NULL
+
+              Suggestions:
+                Possible reasons:
+                  1.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+
+              Suggestions:
+                Possible reasons:
+                  1.The feature of the camera device is not available or not implemented
+                  2.Camera device is abnormal and cannot get feature number
     """
     return _pcammls.TYGetDeviceFeatureNumber(hDevice, componentID, size)
 
@@ -8890,68 +10741,98 @@ def TYGetDeviceFeatureInfo(hDevice, componentID, featureInfo, entryCount):
     :param [out]: featureInfo   Output feature info.
     :param [in]:  entryCount    Array size of input parameter "featureInfo".
     :param [out]: filledEntryCount      Number of filled featureInfo.
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetDeviceFeatureInfo(hDevice, componentID, featureInfo, entryCount, filledEntryCount);
+                                         ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check componentID parameter
+                Like this:
+                  TYGetDeviceFeatureInfo(hDevice, componentID, featureInfo, entryCount, filledEntryCount);
+                                                  ^ is invalid
+                componentID should be the value returned by TYGetComponentIDs
+                You can also view the components of the camera by obtaining the xml description file of the camera device
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetDeviceFeatureInfo(hDevice, componentID, featureInfo, entryCount, filledEntryCount);
+                                                               ^           or           ^ is NULL
+
+              Suggestions:
+                Possible reasons:
+                  1.Network communication is abnormal, please check whether the network connection is normal, whether firewall and other software block the communication, and whether the packet loss rate is too high.
+
+              Suggestions:
+                Possible reasons:
+                  1.The feature of the camera device is not available or not implemented
+                  2.Camera device is abnormal and cannot get feature info
     """
     return _pcammls.TYGetDeviceFeatureInfo(hDevice, componentID, featureInfo, entryCount)
 
 def TYGetDeviceXMLSize(hDevice, size):
     r"""
-    Get the Device xml size
+    Get the Device xml size.
     :param [in]:  hDevice       Device handle.
     :param [out]: size          The size of device xml string
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetDeviceXMLSize(hDevice, size);
+                                     ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
 
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetDeviceXMLSize(hDevice, size);
+                                              ^ is NULL
     """
     return _pcammls.TYGetDeviceXMLSize(hDevice, size)
 
 def TYGetDeviceXML(hDevice, xml, in_size, out_size):
     r"""
-    Get the Device xml string
+    Get the Device xml string.
     :param [in]:  hDevice       Device handle.
     :param [in]:  xml           The buffer to store xml
     :param [in]:  in_size       The size buffer
     :param [out]: out_size      The actual size write in buffer
+              Suggestions:
+                XML buffer size is not enough
+                Like this:
+                  TYGetDeviceXML(hDevice, xml, in_size, out_size);
+                                               ^ is invalid
+                XML buffer size is not enough, please use TYGetDeviceXMLSize to get the xml size
 
+              Suggestions:
+                Please check device handle
+                Like this:
+                  TYGetDeviceXML(hDevice, xml, in_size, out_size);
+                                 ^ is invalid
+                The hDevice parameter you input is not recorded
+                Possible reasons:
+                  1.TYOpenDevice failed to open device and get correct handle
+                  2.Memory in stack to store handle data is corrupted
+                  3.After getting handle, you updated device list by calling TYUpdateDeviceList
+
+              Suggestions:
+                Please check your code
+                Like this:
+                  TYGetDeviceXML(hDevice, xml, in_size, out_size);
+                                          ^      or     ^ is NULL
     """
     return _pcammls.TYGetDeviceXML(hDevice, xml, in_size, out_size)
-
-def TYGetByteArray(hDevice, componentID, featureID, pBuffer, bufferSize):
-    r"""
-    Read byte array from device.
-    :param [in]:  hDevice       Device handle.
-    :param [in]:  componentID   Component ID.
-    :param [in]:  featureID     Feature ID.
-    :param [out]: pbuffer       byte buffer.
-    :param [in]:  bufferSize    Size of buffer.
-
-    """
-    return _pcammls.TYGetByteArray(hDevice, componentID, featureID, pBuffer, bufferSize)
-
-def TYSetByteArray(hDevice, componentID, featureID, pBuffer, bufferSize):
-    r"""
-    Write byte array to device.
-    :param [in]:  hDevice       Device handle.
-    :param [in]:  componentID   Component ID.
-    :param [in]:  featureID     Feature ID.
-    :param [out]: pbuffer       byte buffer.
-    :param [in]:  bufferSize    Size of buffer.
-
-    """
-    return _pcammls.TYSetByteArray(hDevice, componentID, featureID, pBuffer, bufferSize)
-
-def TYGetByteArrayAttr(hDevice, componentID, featureID, pAttr):
-    r"""
-    Write byte array to device.
-    :param [in]:  hDevice       Device handle.
-    :param [in]:  componentID   Component ID.
-    :param [in]:  featureID     Feature ID.
-    :param [out]: pAttr         byte array attribute to be filled.
-
-    """
-    return _pcammls.TYGetByteArrayAttr(hDevice, componentID, featureID, pAttr)
-
-def _TYInitLib():
-    r"""_TYInitLib() -> TY_STATUS"""
-    return _pcammls._TYInitLib()
 
 def TYImageProcesAcceEnable(en):
     r"""
@@ -9534,6 +11415,56 @@ PERCIPIO_STREAM_IR_LEFT = _pcammls.PERCIPIO_STREAM_IR_LEFT
 
 PERCIPIO_STREAM_IR_RIGHT = _pcammls.PERCIPIO_STREAM_IR_RIGHT
 
+class PercipioRectifyIntrData(object):
+    r"""Proxy of C++ PercipioRectifyIntrData class."""
+
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+    __swig_destroy__ = _pcammls.delete_PercipioRectifyIntrData
+
+    def __init__(self, *args):
+        r"""
+        __init__(self) -> PercipioRectifyIntrData
+        __init__(self, intr) -> PercipioRectifyIntrData
+
+        Parameters
+        ----------
+        intr: TY_CAMERA_INTRINSIC const
+
+        """
+        _pcammls.PercipioRectifyIntrData_swiginit(self, _pcammls.new_PercipioRectifyIntrData(*args))
+
+    def Data(self):
+        r"""Data(self) -> ty_float_vector"""
+        return _pcammls.PercipioRectifyIntrData_Data(self)
+
+# Register PercipioRectifyIntrData in _pcammls:
+_pcammls.PercipioRectifyIntrData_swigregister(PercipioRectifyIntrData)
+class PercipioRectifyRotaData(object):
+    r"""Proxy of C++ PercipioRectifyRotaData class."""
+
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+    __swig_destroy__ = _pcammls.delete_PercipioRectifyRotaData
+
+    def __init__(self, *args):
+        r"""
+        __init__(self) -> PercipioRectifyRotaData
+        __init__(self, intr) -> PercipioRectifyRotaData
+
+        Parameters
+        ----------
+        intr: TY_CAMERA_ROTATION const
+
+        """
+        _pcammls.PercipioRectifyRotaData_swiginit(self, _pcammls.new_PercipioRectifyRotaData(*args))
+
+    def Data(self):
+        r"""Data(self) -> ty_float_vector"""
+        return _pcammls.PercipioRectifyRotaData_Data(self)
+
+# Register PercipioRectifyRotaData in _pcammls:
+_pcammls.PercipioRectifyRotaData_swigregister(PercipioRectifyRotaData)
 class PercipioCalibData(object):
     r"""Proxy of C++ PercipioCalibData class."""
 
@@ -10468,6 +12399,30 @@ class PercipioSDK(object):
 
         """
         return _pcammls.PercipioSDK_DeviceReadCalibData(self, handle, stream)
+
+    def DeviceReadRectifiedIntrData(self, handle, stream):
+        r"""
+        DeviceReadRectifiedIntrData(self, handle, stream) -> PercipioRectifyIntrData
+
+        Parameters
+        ----------
+        handle: TY_DEV_HANDLE const
+        stream: PERCIPIO_STREAM_ID const
+
+        """
+        return _pcammls.PercipioSDK_DeviceReadRectifiedIntrData(self, handle, stream)
+
+    def DeviceReadRectifiedRotationData(self, handle, stream):
+        r"""
+        DeviceReadRectifiedRotationData(self, handle, stream) -> PercipioRectifyRotaData
+
+        Parameters
+        ----------
+        handle: TY_DEV_HANDLE const
+        stream: PERCIPIO_STREAM_ID const
+
+        """
+        return _pcammls.PercipioSDK_DeviceReadRectifiedRotationData(self, handle, stream)
 
     def DeviceReadCalibDepthScaleUnit(self, handle):
         r"""
