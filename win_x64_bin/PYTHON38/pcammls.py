@@ -12435,6 +12435,18 @@ class PercipioSDK(object):
         """
         return _pcammls.PercipioSDK_DeviceReadCalibDepthScaleUnit(self, handle)
 
+    def DeviceControlReadTemperature(self, handle, ID):
+        r"""
+        DeviceControlReadTemperature(self, handle, ID) -> float
+
+        Parameters
+        ----------
+        handle: TY_DEV_HANDLE const
+        ID: TY_TEMPERATURE_ID
+
+        """
+        return _pcammls.PercipioSDK_DeviceControlReadTemperature(self, handle, ID)
+
     def DeviceControlTriggerModeEnable(self, handle, enable):
         r"""
         DeviceControlTriggerModeEnable(self, handle, enable) -> int
